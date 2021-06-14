@@ -1,4 +1,4 @@
-**1. Write a simple program for nested comments. what is the error & how we resolve it?**
+1. Write a simple program for nested comments. what is the error & how we resolve it?
 Ans:  #include<stdio.h>
       int main()
       {
@@ -29,7 +29,7 @@ Ans:  #include<stdio.h>
         return 0;
     }
     
-**2. A block of code is given to you and comment out all the code.**
+2. A block of code is given to you and comment out all the code.
 Ans:We can comment out a block of code by covering it within #if 0 and #endif.
     Example:
     #include<stdio.h>
@@ -43,7 +43,7 @@ Ans:We can comment out a block of code by covering it within #if 0 and #endif.
       return 0;
     }
 
-**3. execute the following code and note down the outputs.**
+3. execute the following code and note down the outputs.
 
 #include <stdio.h>
 int main()
