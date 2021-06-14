@@ -11,8 +11,8 @@ Ans:  #include<stdio.h>
           return 0;
       }
     
-    Here both the outer nested comment and the inner one will be terminate at the same time when '*/' is met , 
-    hence the last line will not be comment resulting in an error.
+    Here both the outer nested comment and the inner one will be terminated at the same time when '*/' is met , 
+    hence the last line will not be treated as a comment resulting in an error.
     
     To resolve this issue we can use the '//' symbol for the inner comment , here is an example
     
@@ -37,7 +37,14 @@ Ans:We can comment out a block of code by covering it within #if 0 and #endif.
     {
       #if 0
       
-      This is within the if 0 definition hence will be not be compiled.
+      This 
+      is within 
+      the 
+      if 0 
+      definition 
+      hence will be 
+      not be 
+      compiled.
       
       #endif
       return 0;
