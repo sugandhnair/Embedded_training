@@ -1,0 +1,33 @@
+1.Go to the printf implementation and find out why we are getting junk ?
+Answer :   Because printf function expects format specifier.
+  
+2.Conclude structure copy of C is shallow copy or deep copy?
+Answer :  Using assignment operators on structers results in a shallow copy.
+
+3.Draw the memorry layout for big & little endian and map the variables from the given program!
+#include <stdio.h>
+union{
+    int x;
+    short sh;
+    char c[2];
+    char ch[4];
+}var;
+
+int main()
+{
+    var.x = 0x12345678;
+    printf("0x%x 0x%x 0x%x\n",var.sh,var.c[0],var.c[1]);
+    printf("0x%x 0x%x 0x%x 0x%x\n",var.ch[0],var.ch[1],var.ch[2],var.ch[3]);
+    return 0;
+}
+
+Answer : 
+a) In case of little-endian the output will be : 
+    0x5678 0x78 0x56
+    0x78 0x56 0x34 0x12
+b) In case of big-endian the output will be :
+    0x1234 0x12 0x34
+    0x12 0x34 0x56 0x78
+    
+4.List out the applications of Union?
+Answer : Unions can be used in case the same memory address has to be shared by variables of different data types for example hardware input/output access, bitfield and word sharing, or type punning..
