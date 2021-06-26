@@ -10,7 +10,7 @@
 
 typedef union byte
 {
-    unsigned short int bit:1;
+    unsigned char bit:1;
 }byte_t;
 
 byte_t bits[8];
