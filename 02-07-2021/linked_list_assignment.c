@@ -108,6 +108,25 @@ void middle_element(struct Node *ptr)
     printf("The middle element is %d\n",slow_ptr->data);
 }
 
+int count_elements(struct Node *p)
+{
+    int count = 0;
+    while(p!=NULL){
+        p=p->next;
+        count++;
+    }
+    return count;
+}
+
+int print_index(struct Node *p,int index)
+{
+    int i = 0;
+    do{
+        p=p->next;
+        i++;
+    }while(i<index);
+    return (p->data);
+}
 int main()
 {
     int A[] = {3,5,7,10,15};
@@ -117,6 +136,7 @@ int main()
     display(head_ptr);
 
     insert_at_end(head_ptr,20);
+    insert_at_end(head_ptr,27);
     display(head_ptr);
 
     insert_at_index(head_ptr,3,35);
@@ -130,15 +150,19 @@ int main()
     printf("The reversed list is : ");
     reverse(head_ptr);
 
+    int no_of_elements = count_elements(head_ptr);
+    printf("\nNumber of elements in the linked list is  : %d\n",no_of_elements);
+    printf("1/4 element in the lnked list is %d ,and 3/4 element of the linked list is %d.\n",print_index(head_ptr,no_of_elements*0.75),print_index(head_ptr,no_of_elements*0.25));
     return 0;
 }
 
-
-/* OUTPUT : 
+/*OUTPUT : 
 Linked list elements are : 3 5 7 10 15 
-Linked list elements are : 3 5 7 10 15 20 
-Linked list elements are : 3 5 35 7 10 15 20 
-Second last element is : 15
-The middle element is 7
-The reversed list is : 20 15 10 7 35 5 3 
+Linked list elements are : 3 5 7 10 15 20 27 
+Linked list elements are : 3 5 35 7 10 15 20 27 
+Second last element is : 20
+The middle element is 10
+The reversed list is : 27 20 15 10 7 35 5 3 
+Number of elements in the linked list is  : 8
+1/4 element in the lnked list is 20 ,and 3/4 element of the linked list is 35.
 */
